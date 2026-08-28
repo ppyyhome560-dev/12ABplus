@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1A2B 數字對戰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>1A2B 數字對戰</h1>
+
+        <div class="mode-select">
+            <button id="single-mode-btn" class="active" onclick="switchMode('single')">單人模式</button>
+            <button id="ai-mode-btn" onclick="switchMode('ai')">AI 對戰模式</button>
+        </div>
+
+        <div id="ai-setup" class="card hidden">
+            <h3>請設定給 AI 猜的秘鑰 (4位不重複數字)</h3>
+            <div class="input-group">
+                <input type="password" id="secret-input" maxlength="4" placeholder="例如: 5678">
+                <button onclick="confirmSecret()">確定秘鑰</button>
+            </div>
+            <p id="secret-status" class="hint-text"></p>
+        </div>
+
+        <div class="game-area">
+            <!-- 玩家猜題區 -->
+            <div class="card">
+                <h2 id="player-title">你的猜測紀錄</h2>
+                <div class="input-group">
+                    <input type="text" id="player-input" maxlength="4" placeholder="輸入4個不重複數字" disabled>
+                    <button id="guess-btn" onclick="playerGuess()" disabled>猜！</button>
+                </div>
+                <ul id="player-history" class="history-list"></ul>
+            </div>
+
+            <!-- AI 猜題區 -->
+            <div id="ai-card" class="card hidden">
+                <h2>AI 的猜測紀錄</h2>
+                <div class="status-msg" id="ai-status">等待玩家設定秘鑰...</div>
+                <ul id="ai-history" class="history-list"></ul>
+            </div>
+        </div>
+
+        <button class="reset-btn" onclick="initGame()">重新開始遊戲</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
