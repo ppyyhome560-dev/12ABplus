@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.mode-select {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mode-select button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #334155;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.mode-select button.active {
+    background: #0284c7;
+    font-weight: bold;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    flex: 1;
+}
+
+.game-area {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #10b981;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+.history-list {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.history-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hint-text {
+    color: #f59e0b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.status-msg {
+    color: #94a3b8;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.reset-btn {
+    background: #ef4444;
+    margin-top: 10px;
+}
